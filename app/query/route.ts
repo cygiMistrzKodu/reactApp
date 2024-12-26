@@ -10,6 +10,10 @@ async function listInvoices() {
     WHERE invoices.amount = 666;
   `;
 
+  // const data = await client.sql`
+  //   DROP TABLE invoices;
+  // `;
+
 	return data.rows;
 }
 
