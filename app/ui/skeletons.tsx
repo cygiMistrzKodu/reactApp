@@ -18,7 +18,7 @@ export function CardSkeleton() {
   );
 }
 
-export function CardsSkeleton() {
+export function CardsSkeleton() { 
   return (
     <>
       <CardSkeleton />
