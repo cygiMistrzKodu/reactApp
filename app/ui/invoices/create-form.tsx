@@ -17,7 +17,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
   const [state, formAction] = useActionState(createInvoice, initialState);
 
   return (
-    <form action={formAction} >
+    <form action={formAction} aria-describedby='invoice-error' >
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
@@ -83,7 +83,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
 
         {/* Invoice Status */}
-        <fieldset aria-describedby='status-error'>
+        <fieldset>
           <legend className="mb-2 block text-sm font-medium">
             Set the invoice status
           </legend>
@@ -104,7 +104,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   Pending <ClockIcon className="h-4 w-4" />
                 </label>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center" aria-describedby='status-error'>
                 <input
                   id="paid"
                   name="status"
