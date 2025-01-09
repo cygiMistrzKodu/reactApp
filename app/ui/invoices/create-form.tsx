@@ -83,7 +83,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
 
         {/* Invoice Status */}
-        <fieldset aria-describedby='amount-error'>
+        <fieldset aria-describedby='status-error'>
           <legend className="mb-2 block text-sm font-medium">
             Set the invoice status
           </legend>
